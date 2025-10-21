@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121212;
+  padding: 1.2rem 5%;
+}
+
+.logo {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #00aaff;
+}
+
+.navbar nav a {
+  color: #ccc;
+  margin-left: 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00aaff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: linear-gradient(135deg, #101820, #0e0e0e 70%);
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #00aaff;
+}
+
+.hero p {
+  margin: 1rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #aaa;
+}
+
+.btn {
+  display: inline-block;
+  background: #00aaff;
+  padding: 0.8rem 2rem;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #0088cc;
+}
+
+.about, .projects, .contact {
+  padding: 5rem 10%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background: #141414;
+  padding: 1.5rem;
+  border-left: 3px solid #00aaff;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact .links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact .links a {
+  margin: 0 1rem;
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  background: #0e0e0e;
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
