@@ -1,0 +1,18 @@
+/* Active nav */
+.navbar nav a.active { color: #00aaff; }
+.page { padding: 4rem 10%; }
+.lede { color: #aaa; max-width: 760px; margin: 0 auto 2rem; text-align: center; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+.chip { background:#0f2a36; color:#9fe1ff; padding:.25rem .6rem; border-radius: 999px; font-size:.85rem; }
+.meta { color:#8a8a8a; font-size:.9rem; }
+.banner { background: linear-gradient(135deg, #101820, #0e0e0e 70%); padding: 5rem 10%; text-align:center; }
+.banner h1 { font-size: 2.2rem; }
+.section { margin: 3rem 0; }
+.card { background:#141414; padding:1.5rem; border-left:3px solid #00aaff; border-radius:8px; transition:transform .3s; }
+.card:hover { transform: translateY(-4px); }
+.list { display: grid; gap: 1rem; }
+a.inline { color:#00aaff; text-decoration:none; }
+.figure { background:#111; border:1px solid #1b1b1b; border-radius:10px; padding:1rem; }
+.figure img { width:100%; border-radius:6px; }
+kbd { background:#1b1b1b; padding:.15rem .35rem; border-radius:4px; border:1px solid #333; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
