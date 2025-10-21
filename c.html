@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AK Forge — Portfolio</title>
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Components Demo</title>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
   <script defer src="/assets/js/main.js"></script>
 </head>
 <body>
   <div id="site-header"></div>
-
-  <section class="hero">
-    <div class="content">
-      <h2>Hello, I'm <span>AK</span></h2>
-      <p>A 16‑year‑old developer building Windows apps, Discord bots, and OSINT‑style web tools.</p>
-      <a href="/pages/projects.html" class="btn">View Projects</a>
-    </div>
-  </section>
-
   <section class="page">
+    <h2>Components</h2>
     <div class="grid-2">
       <div class="card">
-        <h3>What I build</h3>
-        <p>WPF/WinUI desktop apps, clean JS frontends, Discord bots, and browser extensions.</p>
-        <div class="chips">
-          <span class="chip">C#</span><span class="chip">WPF</span><span class="chip">JS</span><span class="chip">HTML/CSS</span><span class="chip">Discord API</span>
-        </div>
+        <h3>Buttons</h3>
+        <p><a class="btn">Primary</a> <a class="btn btn-outline">Outline</a> <a class="btn btn-ghost">Ghost</a></p>
       </div>
       <div class="card">
-        <h3>Also into</h3>
-        <p>Minecraft server ops, automation, and beginner‑friendly cybersecurity practice.</p>
-        <div class="chips">
-          <span class="chip">Spigot/Bukkit</span><span class="chip">Bash</span><span class="chip">PowerShell</span><span class="chip">Kali</span>
-        </div>
+        <h3>Chips</h3>
+        <div class="chips"><span class="chip">C#</span><span class="chip">WPF</span><span class="chip">JS</span></div>
+      </div>
+      <div class="card">
+        <h3>Alerts</h3>
+        <div class="alert info">Heads up: this is an info alert.</div>
+        <div class="alert success">Success: operation completed.</div>
+        <div class="alert warn">Warning: check your config.</div>
+        <div class="alert danger">Danger: something went wrong.</div>
+      </div>
+      <div class="card">
+        <h3>Inputs</h3>
+        <form class="form">
+          <label class="field"><span>Name</span><input type="text" placeholder="Your name"/></label>
+          <label class="field"><span>Email</span><input type="email" placeholder="you@domain.com"/></label>
+          <label class="field"><span>Message</span><textarea rows="4" placeholder="Say hi..."></textarea></label>
+          <button class="btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
   </section>
-
   <div id="site-footer"></div>
 </body>
 </html>
