@@ -4,12 +4,18 @@
   const inject = async (sel, file) => {
     const host = document.querySelector(sel);
     if (!host) return;
-    const res = await fetch(file);
-    host.innerHTML = await res.text();
+    try {
+      const res = await fetch(file);
+      if (res.ok) {
+        host.innerHTML = await res.text();
+      }
+    } catch (error) {
+      console.error(`Failed to load ${file}:`, error);
+    }
   };
 
-  await inject('#site-header', '/components/header.html');
-  await inject('#site-footer', '/components/footer.html');
+  await inject('#site-header', '/components/presets/header.html');
+  await inject('#site-footer', '/components/presets/footer.html');
 
   // After injection, set active nav
   const path = location.pathname;
@@ -22,20 +28,23 @@
   ];
   const activeKey = map.find(m => path.endsWith(m.key))?.nav || (path === '/' ? 'home' : null);
   if (activeKey) {
-    document.querySelectorAll('nav a').forEach(a => {
-      a.classList.toggle('active', a.dataset.nav === activeKey);
-    });
+    // Wait a bit for the nav to be injected
+    setTimeout(() => {
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.nav === activeKey);
+      });
+    }, 100);
   }
 
   // Smooth scroll for in‑page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('a[href^="#"]')) {
+      const id = e.target.getAttribute('href').slice(1);
       const el = document.getElementById(id);
       if (el) {
         e.preventDefault();
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    });
+    }
   });
 })();
