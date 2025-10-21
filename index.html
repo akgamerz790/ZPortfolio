@@ -2,34 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AK | Portfolio</title>
-  <!-- Stylesheet linking is done here -->
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <!-- Till here -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script defer src="./assets/js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Madhur — Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <script defer src="/assets/js/main.js"></script>
 </head>
 <body>
+  <div id="site-header"></div>
 
-    <header class="navbar">
-        <h1 class="logo">ak<span>.</span>
-        z</h1>
-            <nav>
-                <a href="./pages/index.html" data-nav="home">Home</a>
-                <a href="./pages/about.html" data-nav="about">About</a>
-                <a href="./pages/projects.html" data-nav="projects">Projects</a>
-                <a href="./pages/blog.html" data-nav="blog">Blog</a>
-                <a href="./pages/contact.html" data-nav="contact">Contact</a>
-            </nav>
-    </header>
+  <section class="hero">
+    <div class="content">
+      <h2>Hello, I'm <span>MADHUR</span> <hr><span class="chip">@akgamerz_790</span></h2>
+      <p>A 16‑year‑old developer building Windows apps, Discord bots, and OSINT‑style web tools.</p>
+      <a href="/pages/projects.html" class="btn">View Projects</a>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 AK | Built with HTML, CSS, and passion.</p>
-</footer>
-    
+  <section class="page">
+    <div class="grid-2">
+      <div class="card">
+        <h3>What I build</h3>
+        <p>WPF/WinUI desktop apps, clean JS frontends, Discord bots, and browser extensions.</p>
+        <div class="chips">
+          <span class="chip">C#</span><span class="chip">WPF</span><span class="chip">JS</span><span class="chip">HTML/CSS</span><span class="chip">Discord API</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Also into</h3>
+        <p>Minecraft server ops, automation, and beginner‑friendly cybersecurity practice.</p>
+        <div class="chips">
+          <span class="chip">Spigot/Bukkit</span><span class="chip">Bash</span><span class="chip">PowerShell</span><span class="chip">Web Dev</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="cta">
+      <h3>Need a hand on a project?</h3>
+      <p>Open to collabs, feedback, and learning opportunities.</p>
+      <a class="btn btn-outline" href="/pages/contacts.html">Contact</a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
 </body>
 </html>
