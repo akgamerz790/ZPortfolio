@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AK | Projects</title>
-  <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script defer src="../assets/js/main.js"></script>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — AK Forge</title>
+  <link rel="stylesheet" href="../assets/css/main.css"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <script defer src="/assets/js/main.js"></script>
 </head>
-
 <body>
-    <header class="navbar">
-        <h1 class="logo">ak<span>.</span>
-        z</h1>
-            <nav>
-                <a href="index.html" data-nav="home">Home</a>
-                <a href="about.html" data-nav="about">About</a>
-                <a href="projects.html" data-nav="projects">Projects</a>
-                <a href="blog.html" data-nav="blog">Blog</a>
-                <a href="contact.html" data-nav="contact">Contact</a>
-            </nav>
-    </header>
+  <div id="site-header"></div>
 
-    <footer>
-        <p>© 2025 AK | Built with HTML, CSS, and passion.</p>
-    </footer>
-    
+  <section class="banner">
+    <h1>Projects</h1>
+    <p class="lede">Selected work across desktop, web, bots, and ops.</p>
+  </section>
+
+  <section class="page project-grid">
+    <a class="project-card" href="/pages/project-tuneos.html">
+      <h3>TuneOS</h3>
+      <p>WPF/WinUI desktop utility with a focus on clarity and performance.</p>
+      <span class="meta">C#, WPF, MVVM</span>
+    </a>
+
+    <a class="project-card" href="/pages/project-instagram-osint.html">
+      <h3>Instagram OSINT</h3>
+      <p>Profile data viewer with clean analytics and dark UI.</p>
+      <span class="meta">HTML, CSS, JS</span>
+    </a>
+
+    <a class="project-card" href="/pages/project-vanillasmp-bot.html">
+      <h3>VanillaSMP Bot</h3>
+      <p>Discord management bot with slash commands and branding.</p>
+      <span class="meta">Node.js, Discord API</span>
+    </a>
+
+    <a class="project-card" href="/pages/project-firefox-extension.html">
+      <h3>Firefox Page Modifier</h3>
+      <p>Custom new‑tab, language detection, translate prompts.</p>
+      <span class="meta">WebExtensions, JS</span>
+    </a>
+
+    <a class="project-card" href="/pages/project-minecraft-ops.html">
+      <h3>Minecraft Server Ops</h3>
+      <p>Spigot/Bukkit configs, automation, and performance tuning.</p>
+      <span class="meta">Java, YAML, Ops</span>
+    </a>
+  </section>
+
+  <div id="site-footer"></div>
 </body>
 </html>
