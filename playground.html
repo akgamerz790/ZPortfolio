@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Playground — AK</title>
+  <!-- Update the href below to your actual CSS path -->
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    /* Minimal layout helpers for the playground wrapper only */
+    .playground { padding: 2rem 8%; display: grid; gap: 2rem; }
+    .group { display: grid; gap: 1rem; }
+    .row { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .demo-card { padding: 1rem; border: 1px solid #1f1f1f; background: #111; border-radius: 10px; }
+    .demo-title { font-size: 1.1rem; color: #bdbdbd; }
+  </style>
+</head>
+<body>
+  <!-- Optional navbar/hero preview -->
+  <header class="navbar">
+    <h1 class="logo">ak<span>.</span></h1>
+    <nav>
+      <a href="#" class="active" data-nav="home">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h2>CSS Playground</h2>
+      <p>Interactive showcase of headings, text, components, utilities, and patterns styled in global.css.</p>
+      <a href="#typography" class="btn">Start Exploring</a>
+    </div>
+  </section>
+
+  <main class="playground">
+    <!-- Typography -->
+    <section id="typography" class="group">
+      <h2>Typography</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="demo-title">Headings & Paragraphs</div>
+          <h1>Heading One</h1>
+          <p>This paragraph follows an H1 and uses tighter rhythm spacing.</p>
+          <h2>Heading Two</h2>
+          <p>Secondary heading with intro copy beneath it.</p>
+          <h3>Heading Three</h3>
+          <p>Standard paragraph. Another sentence to show <a class="inline" href="#">inline link</a> styling.</p>
+          <p>Second paragraph for spacing preview.</p>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Blockquote</div>
+          <blockquote>
+            Good UI is as much about how it feels as how it looks. Make it obvious, fast, and forgiving.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lists -->
+    <section class="group">
+      <h2>Lists</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="demo-title">Styled List</div>
+          <ul class="list">
+            <li>Clean visual grouping with subtle borders</li>
+            <li>Readable padding and spacing</li>
+            <li>Dark theme friendly background</li>
+          </ul>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Breadcrumbs</div>
+          <nav class="breadcrumbs">
+            <a href="#">Home</a>
+            <span class="sep">/</span>
+            <a href="#">Projects</a>
+            <span class="sep">/</span>
+            <span>Playground</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chips, Pills, Badges -->
+    <section class="group">
+      <h2>Chips, Pills, Badges</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="demo-title">Chips</div>
+          <div class="chips">
+            <span class="chip">C#</span>
+            <span class="chip">WPF</span>
+            <span class="chip">JS</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Discord API</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Pills</div>
+          <div class="pills">
+            <span class="pill">Performance</span>
+            <span class="pill">UX</span>
+            <span class="pill">Security</span>
+            <span class="pill">Automation</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Badges</div>
+          <div class="badges">
+            <span class="badge ok">OK</span>
+            <span class="badge warn">Warn</span>
+            <span class="badge err">Error</span>
+            <span class="badge">Neutral</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards & Variants -->
+    <section class="group">
+      <h2>Cards</h2>
+      <div class="row">
+        <div class="card">
+          <h3>Default Card</h3>
+          <p>Uses accent border on the left and hover lift.</p>
+          <a class="inline" href="#">Learn more</a>
+        </div>
+        <div class="card outline">
+          <h3>Outline Variant</h3>
+          <p>Subtle border all around instead of accent strip.</p>
+          <a class="inline" href="#">Details</a>
+        </div>
+        <div class="card soft">
+          <h3>Soft Variant</h3>
+          <p>Softer background tone for quieter emphasis.</p>
+          <a class="inline" href="#">Explore</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="group">
+      <h2>Buttons</h2>
+      <div class="row">
+        <div class="demo-card">
+          <a class="btn">Primary</a>
+          <a class="btn btn-outline">Outline</a>
+          <a class="btn btn-ghost">Ghost</a>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Tooltips</div>
+          <span class="tooltip" data-tip="This is a helpful tooltip.">Hover me</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts, Toast, Skeleton -->
+    <section class="group">
+      <h2>Feedback</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="alert info">Info: Heads up on something minor.</div>
+          <div class="alert success">Success: Everything worked!</div>
+          <div class="alert warn">Warning: Double-check settings.</div>
+          <div class="alert danger">Error: Something went wrong.</div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Toast</div>
+          <div class="toast">Saved successfully. This is a toast preview.</div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Skeleton</div>
+          <div class="skeleton" style="height: 90px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="group">
+      <h2>Forms</h2>
+      <div class="row">
+        <div class="demo-card">
+          <form class="form">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" placeholder="you@domain.com" />
+            </label>
+            <label class="field">
+              <span>Topic</span>
+              <select>
+                <option>General</option>
+                <option>Collab</option>
+                <option>Bug report</option>
+              </select>
+            </label>
+            <fieldset class="field">
+              <span>Preferences</span>
+              <label><input type="checkbox" checked /> Email updates</label>
+              <label><input type="checkbox" /> Discord ping</label>
+            </fieldset>
+            <fieldset class="field">
+              <span>Priority</span>
+              <label><input type="radio" name="prio" checked /> Normal</label>
+              <label><input type="radio" name="prio" /> High</label>
+            </fieldset>
+            <label class="field">
+              <span>Message</span>
+              <textarea rows="4" placeholder="Say hi..."></textarea>
+            </label>
+            <button class="btn" type="button">Submit</button>
+          </form>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">Progress & Meter</div>
+          <progress value="60" max="100"></progress>
+          <br />
+          <meter min="0" low="30" high="70" max="100" value="45"></meter>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media, Avatars -->
+    <section class="group">
+      <h2>Media & Avatars</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="media">
+            <img class="avatar lg" src="https://scontent.cdninstagram.com/v/t51.2885-19/457601104_1264638608036419_8142943736423420831_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=105&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4zMjAuQzMifQ%3D%3D&_nc_ohc=ZAvsdYOm6LgQ7kNvwHZoA1p&_nc_oc=Adn78L-YZAzDcJaKVTpHh7Ul4nYiHDTwzW_8rlYdlqidxZn7lO2e2NBbkEHbCKYIQUkuiJEhITJfwdd3YhTyoL-5&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AffslQ5SlcqnaFG7Mo7Gf5TRe0hkzKUSxEyNAExdn_yq0Q&oe=68FCFDE5" alt="Avatar"/>
+            <div>
+              <div class="media-title">akgamerz_790</div>
+              <div class="media-meta">Developer • WPF, JS, Bots</div>
+              <p class="mt-1">Media object pairs an image with structured text.</p>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="figure">
+            <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="Figure preview" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs & Details -->
+    <section class="group">
+      <h2>Tabs & Details</h2>
+      <div class="row">
+        <div class="demo-card">
+          <div class="tabs">
+            <div class="tab-list">
+              <button class="tab" aria-selected="true" onclick="selectTab(this)">Overview</button>
+              <button class="tab" onclick="selectTab(this)">Tech</button>
+              <button class="tab" onclick="selectTab(this)">Links</button>
+            </div>
+            <div class="tab-panels" id="tab-panels">
+              <p>Overview content shown here.</p>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <details>
+            <summary>What is this?</summary>
+            <p>A FAQ-style accordion using details/summary with themed borders.</p>
+          </details>
+          <details>
+            <summary>How do I use it?</summary>
+            <p>Click summary to toggle. Works without extra JS.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tables, Code, KBD -->
+    <section class="group">
+      <h2>Tables & Code</h2>
+      <div class="row">
+        <div class="demo-card">
+          <table class="table striped compact">
+            <thead>
+              <tr><th>Feature</th><th>Status</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cards</td><td>Ready</td><td>Accent left border</td></tr>
+              <tr><td>Chips</td><td>Ready</td><td>Flex wrap</td></tr>
+              <tr><td>Tabs</td><td>Ready</td><td>ARIA selected</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="demo-card">
+          <pre><code>// Code block preview
+function greet(name){
+  return `Hello, ${name}`;
+}
+console.log(greet('AK'));
+</code></pre>
+          <p>Shortcut: press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the command palette.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination & Grid helpers -->
+    <section class="group">
+      <h2>Pagination & Grids</h2>
+      <div class="row">
+        <div class="demo-card center">
+          <nav class="pagination">
+            <a class="page-btn" href="#prev">Prev</a>
+            <a class="page-btn" aria-current="page" href="#1">1</a>
+            <a class="page-btn" href="#2">2</a>
+            <a class="page-btn" href="#3">3</a>
+            <a class="page-btn" href="#next">Next</a>
+          </nav>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">grid-3</div>
+          <div class="grid-3">
+            <div class="card soft"><h4>Item A</h4><p>Auto-fit column.</p></div>
+            <div class="card soft"><h4>Item B</h4><p>Responsive layout.</p></div>
+            <div class="card soft"><h4>Item C</h4><p>Wraps at small widths.</p></div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-title">grid-auto (horizontal)</div>
+          <div class="grid-auto">
+            <div class="card soft"><h4>One</h4></div>
+            <div class="card soft"><h4>Two</h4></div>
+            <div class="card soft"><h4>Three</h4></div>
+            <div class="card soft"><h4>Four</h4></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Preview -->
+    <section class="group">
+      <h2>Modal</h2>
+      <div class="row">
+        <div class="demo-card">
+          <a class="btn" onclick="openModal()">Open Modal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 AK • CSS Playground</p>
+  </footer>
+
+  <!-- Modal markup -->
+  <div class="modal" id="demo-modal" aria-hidden="true">
+    <div class="dialog">
+      <header>Intialization <span class="badge ok">SUCCESS</span></header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officia consequatur dolore ipsam maxime quaerat dolorum autem et quam modi. Accusamus voluptas minima accusantium sequi, rerum iure suscipit provident inventore.</p>
+      <div class="mt-2">
+        <a class="btn" onclick="closeModal()">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectTab(el) {
+      document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+      el.setAttribute('aria-selected', 'true');
+      const label = el.textContent.trim();
+      const panels = document.getElementById('tab-panels');
+      panels.innerHTML = '<p>' + label + ' content shown here.</p>';
+    }
+    function openModal() {
+      const m = document.getElementById('demo-modal');
+      m.classList.add('open');
+      m.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal() {
+      const m = document.getElementById('demo-modal');
+      m.classList.remove('open');
+      m.setAttribute('aria-hidden', 'true');
+    }
+  </script>
+  <script src="./assets/js/new.js"></script>
+</body>
+</html>
