@@ -1,72 +1,37 @@
-/* Active nav */
-.navbar nav a.active { color: #00aaff; }
-.page { padding: 4rem 10%; }
-.lede { color: #aaa; max-width: 760px; margin: 0 auto 2rem; text-align: center; }
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
-.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
-.chip { background:#0f2a36; color:#9fe1ff; padding:.25rem .6rem; border-radius: 999px; font-size:.85rem; }
-.meta { color:#8a8a8a; font-size:.9rem; }
-.banner { background: linear-gradient(135deg, #101820, #0e0e0e 70%); padding: 5rem 10%; text-align:center; }
-.banner h1 { font-size: 2.2rem; }
-.section { margin: 3rem 0; }
-.card { background:#141414; padding:1.5rem; border-left:3px solid #00aaff; border-radius:8px; transition:transform .3s; }
-.card:hover { transform: translateY(-4px); }
-.list { display: grid; gap: 1rem; }
-a.inline { color:#00aaff; text-decoration:none; }
-.figure { background:#111; border:1px solid #1b1b1b; border-radius:10px; padding:1rem; }
-.figure img { width:100%; border-radius:6px; }
-kbd { background:#1b1b1b; padding:.15rem .35rem; border-radius:4px; border:1px solid #333; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-
-
-/* New stylings */
-/* Layout helpers */
-.page { padding: 4rem 10%; }
-.section { margin: 3rem 0; }
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
-.project-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
-
-/* Header + nav */
-.navbar nav a.active { color: #00aaff; }
-
-/* Hero + banner */
-.banner { background: linear-gradient(135deg, #101820, #0e0e0e 70%); padding: 5rem 10%; text-align: center; }
-.banner h1 { font-size: 2.2rem; }
-
-/* Cards */
-.card { background:#141414; padding:1.5rem; border-left:3px solid #00aaff; border-radius:8px; transition:transform .3s; }
-.card:hover { transform: translateY(-4px); }
-
-/* Project cards */
-.project-card { display:flex; flex-direction:column; gap:.75rem; background:#141414; padding:1.5rem; border-left:3px solid #00aaff; border-radius:8px; transition:transform .3s, border-color .3s; }
-.project-card:hover { transform: translateY(-4px); border-color:#0088cc; }
-.project-card .meta { margin-top:.25rem; }
-.project-card .actions { margin-top:auto; display:flex; gap:.5rem; align-items:center; }
-
-/* Chips */
-.chips { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
-.chip { background:#0f2a36; color:#9fe1ff; padding:.25rem .6rem; border-radius:999px; font-size:.85rem; display:inline-block; width:auto; }
-
 /* Buttons */
-.btn { display:inline-block; background:#00aaff; padding:.55rem 1rem; color:#fff; border-radius:6px; font-weight:600; text-decoration:none; transition:background .25s, box-shadow .25s; line-height:1; }
-.btn:hover { background:#0088cc; box-shadow: 0 6px 18px rgba(0,170,255,.15); }
-.btn-outline { background:transparent; border:1px solid #00aaff; color:#00aaff; }
-.btn-outline:hover { background:#001e29; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  background:#00aaff; color:#0b0f12; /* dark text by default */
+  padding:.65rem 1.1rem; border-radius:8px; font-weight:700; text-decoration:none;
+  line-height:1.1; border:1px solid transparent; box-shadow: none;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .08s ease; }
+.btn:hover { background:#21b6ff; color:#061018; box-shadow:0 6px 16px rgba(0,170,255,.22); }
+.btn:active { transform: translateY(1px); }
+
+/* Ensure button text is visible on dark themes */
+.btn, .btn * { color:#081015; }
+.btn:hover, .btn:hover * { color:#061018; }
+
+/* Variants */
+.btn-outline { background:transparent; border:1px solid #00aaff; color:#9fe1ff; }
+.btn-outline:hover { background:#02151e; color:#c8f0ff; }
 .btn-ghost { background:transparent; color:#e6e6e6; }
 .btn-ghost:hover { background:#151515; }
-.btn-small { padding:.4rem .75rem; font-size:.85rem; }
 
-/* Ensure buttons inside cards don't stretch */
-.project-card a.btn { align-self:flex-start; width:auto; }
+/* Sizes */
+.btn-small { padding:.5rem .9rem; font-size:.95rem; border-radius:7px; }
+.btn-medium { padding:.7rem 1.15rem; font-size:1rem; }
+.btn-large { padding:.9rem 1.35rem; font-size:1.05rem; }
 
-/* Footer chips pill width fix */
-.project-card .chip { width:auto; }
+/* Fix links inheriting colors inside dark cards */
+.project-card a.btn { color:#081015 !important; }
+.project-card a.btn:hover { color:#061018 !important; }
 
-/* Responsive tweaks */
-@media (max-width: 640px) {
-  .page { padding: 2.5rem 6%; }
-  .banner { padding: 3.5rem 6%; }
-}
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: #0088cc;
-}
+/* Make buttons align nicely at card bottom and be proportional */
+.project-card { display:flex; flex-direction:column; }
+.project-card .actions { margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap; }
+
+/* Avoid full-width pills */
+.project-card .chip, .project-card a.btn { width:auto; display:inline-flex; }
+
+/* Chip contrast tweak so it doesn’t look like a button */
+.chip { background:#0e2030; color:#9fdcff; border:1px solid #10364a; }
