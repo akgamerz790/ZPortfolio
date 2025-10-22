@@ -3,31 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AK | Portfolio</title>
-  <!-- Stylesheet linking is done here -->
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <!-- Till here -->
+  <title>Blog — AK Forge</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script defer src="./assets/js/main.js"></script>
+  <script defer src="../assets/js/global.js"></script>
 </head>
-
 <body>
-    <header class="navbar">
-  <h1 class="logo">ak<span>.</span></h1>
-  <nav>
-    <a href="/index.html" data-nav="home">Home</a>
-    <a href="/pages/about.html" data-nav="about">About</a>
-    <a href="/pages/projects.html" data-nav="projects">Projects</a>
-    <a href="/pages/blog.html" data-nav="blog">Blog</a>
-    <a href="/pages/contacts.html" data-nav="contact">Contact</a>
-  </nav>
-</header>
+  <div id="site-header"></div>
 
-    <footer>
-        <p>© 2025 AK | Built with HTML, CSS, and passion.</p>
-    </footer>
+  <section class="banner">
+    <h1>Blog</h1>
+    <p class="lede">Thoughts on development, cybersecurity, and technology.</p>
+  </section>
+
+  <section class="page">
+    <div class="blog-posts">
+      <article class="card">
+        <h3>Coming Soon: Development Blog</h3>
+        <p class="meta">October 2025</p>
+        <p>I'm working on setting up a proper blog to share insights about:</p>
+        <ul class="list">
+          <li><strong>Desktop Development</strong> — WPF/WinUI tips and experiences</li>
+          <li><strong>Discord Bot Development</strong> — Best practices and tutorials</li>
+          <li><strong>Cybersecurity Learning</strong> — CTF writeups and educational content</li>
+          <li><strong>Minecraft Server Management</strong> — Optimization and automation guides</li>
+          <li><strong>Web Development</strong> — Modern frontend techniques</li>
+        </ul>
+        <p>Stay tuned for regular updates and technical deep-dives!</p>
+      </article>
+
+      <article class="card">
+        <h3>Portfolio Development Journey</h3>
+        <p class="meta">October 2025</p>
+        <p>Building this portfolio has been an interesting exercise in clean, modular web development. Key learnings:</p>
+        <ul class="list">
+          <li>Component-based architecture for maintainable HTML</li>
+          <li>Vanilla JavaScript for lightweight interactions</li>
+          <li>CSS Grid and Flexbox for responsive layouts</li>
+          <li>GitHub Pages deployment and optimization</li>
+        </ul>
+        <p>The modular approach with separate header/footer components makes maintaining the site much easier, and the vanilla JS keeps things fast and lightweight.</p>
+      </article>
+
+      <article class="card">
+        <h3>Learning Cybersecurity at 16</h3>
+        <p class="meta">October 2025</p>
+        <p>My journey into cybersecurity started with curiosity about how systems work. Currently exploring:</p>
+        <ul class="list">
+          <li><strong>Hack The Box</strong> — CTF challenges and hands-on learning</li>
+          <li><strong>Network Analysis</strong> — Understanding protocols and traffic</li>
+          <li><strong>OSINT Techniques</strong> — Information gathering and analysis</li>
+          <li><strong>Ethical Hacking</strong> — Educational penetration testing</li>
+        </ul>
+        <p>Always approaching cybersecurity from an educational perspective, focusing on defense and understanding rather than exploitation.</p>
+      </article>
+
+      <div class="card">
+        <h3>Subscribe for Updates</h3>
+        <p>Want to be notified when I start publishing regular blog posts? Connect with me on GitHub or Discord for updates on new content!</p>
+        <div class="chips">
+          <a href="https://github.com/akgamerz790" target="_blank" rel="noopener" class="chip">GitHub</a>
+          <span class="chip">Discord: @akgamerz_790</span>
+        </div>
+        <p>I'm planning to share more detailed technical posts, project breakdowns, and learning experiences as I continue developing my skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
 </body>
 </html>
