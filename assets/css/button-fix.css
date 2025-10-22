@@ -1,0 +1,11 @@
+/* Buttons - minimal fix only */
+.btn { display:inline-block; background:#00aaff; padding:.55rem 1rem; color:#fff; border-radius:6px; font-weight:600; text-decoration:none; transition:background .25s, box-shadow .25s; }
+.btn:hover { background:#0088cc; box-shadow: 0 6px 18px rgba(0,170,255,.15); }
+.btn-outline { background:transparent; border:1px solid #00aaff; color:#00aaff; }
+.btn-outline:hover { background:#001e29; }
+.btn-ghost { background:transparent; color:#e6e6e6; }
+.btn-ghost:hover { background:#151515; }
+.btn-small { padding:.4rem .75rem; font-size:.85rem; }
+
+/* Ensure buttons inside project cards don’t stretch */
+.project-card a.btn { align-self:flex-start; width:auto; }
